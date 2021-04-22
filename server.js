@@ -29,7 +29,7 @@ router.post("/message", (_req, res) => {
   console.log(_req.query);
 
   if (_req.query.error == "ok") {
-    response.error(_req, res, "error simulado");
+    response.error(_req, res, "error simulado", 500, "simulación de errores");
   } else {
     response.success(_req, res, "creado exitosamente");
   }
