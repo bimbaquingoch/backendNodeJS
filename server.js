@@ -13,6 +13,9 @@ app.use(bodyPrser.json());
 app.use(bodyPrser.urlencoded({ extended: false }));
 app.use(router);
 
+//archios estáticos (HTML, CSS,JS FRONTEND)
+app.use("/app", express.static("public"));
+
 router.get("/message", (_req, res) => {
   //lectura de las cabeceras
   console.log(_req.headers);
